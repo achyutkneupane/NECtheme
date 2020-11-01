@@ -1,0 +1,414 @@
+/*
+Theme Name: Nepali E-Chords
+Theme URI: https://nepaliechords.com
+Author: Achyut Neupane
+Author URI: https://fb.me/ThisIsAchyut
+Description: Theme for NepaliEChords.com
+Version: 1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nepaliechords
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;500&family=Yanone+Kaffeesatz:wght@300&display=swap");
+
+body {
+  background-color: #e3e3e3;
+}
+
+.box-shadow-full {
+  padding: 3rem 1.25rem;
+  position: relative;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.jumbotron {
+  border-radius: 0 !important;
+}
+
+/* NAVBAR */
+
+.navbar-b {
+  color: #fff;
+}
+.navbar-b a {
+  color: #fff;
+}
+
+.navbar-b .dropdown-menu {
+  background: transparent;
+  border: 0;
+}
+
+.navbar-b .dropdown-menu .dropdown-item {
+  padding: 0.3rem 0.7rem;
+  transition: all 500ms ease;
+}
+
+.navbar-b .dropdown-menu .dropdown-item:hover {
+  background-color: #c3c3c3;
+  color: #000;
+  transition: all 500ms ease;
+}
+
+.navbar-b .dropdown-menu .dropdown-item.active {
+  background-color: #c3c3c3;
+}
+.navbar-toggler {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: 0;
+}
+
+.navbar-trans .navbar-toggler span,
+.navbar-reduce .navbar-toggler span,
+.navbar-non-coll .navbar-toggler span {
+  display: block;
+  background-color: #000;
+  height: 3px;
+  width: 25px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  left: 0;
+  opacity: 1;
+}
+.navbar-trans .navbar-toggler span {
+  background-color: #fff;
+}
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  opacity: 0.9;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  height: 12px;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  opacity: 0.9;
+}
+.navbar-trans {
+  transition: all 0.5s ease-in-out;
+  padding-top: 18px;
+}
+.navbar-reduce {
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+  color: #141446;
+}
+.custom-logo {
+  height: 65px;
+  width: 130px;
+}
+.navbar-reduce a {
+  color: #141446;
+}
+.navbar-reduce .dropdown-menu {
+  background: #fff;
+  border: 1px solid #fff;
+}
+.navbar-trans .dropdown-menu {
+  background: #fff;
+  border: 1px solid #fff;
+}
+.navbar-trans .dropdown-menu a {
+  color: #141446;
+}
+.navbar-non-coll {
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+  color: #141446;
+}
+.navbar-non-coll a {
+  color: #141446;
+}
+.navbar-non-coll .dropdown-menu {
+  background: #fff;
+  border: 1px solid #fff;
+}
+/* HOME SECTION */
+.homeSection {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.bgImage {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.darkOverlay {
+  background-color: rgba(20, 20, 70, 0.93);
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.display-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+}
+.homeSection .titleBox {
+  text-align: center;
+  top: 50%;
+  transform: translateY(-25%);
+  position: absolute;
+}
+.titleBox .subTitle {
+  font-family: "Oswald", sans-serif;
+}
+
+.titleBox .subtext {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  left: 20vw;
+  width: 60vw;
+  text-align: center;
+  margin-top: 2vh;
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+/* BLOG SECTION*/
+.blogSection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.blogSection .container {
+  background-color: #fff;
+}
+.pageSection {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+.archiveSection {
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
+}
+.archiveTitle {
+  font-family: "Anton", sans-serif;
+}
+/* .archiveTitle a {
+  color: #bf1e2e !important;
+} */
+.archiveText {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+/* Single Page */
+
+.pageSection .titleBox {
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+.pageText {
+  color: #fff;
+}
+.pageText a {
+  font-size: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+.singlePage .display-4 {
+  font-size: 35px;
+}
+.contentSection a {
+  color: #000;
+}
+.whiteLink a {
+  color: #fff;
+  text-decoration: none;
+}
+.blackLink a {
+  color: #bf1e2e;
+  text-decoration: none;
+}
+.contentSection .text-muted .text-left {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 20px;
+}
+
+blockquote {
+  border-left: 5px solid #9c9c9c;
+  padding-left: 20px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 18px;
+}
+.post .post-entry img {
+  width: 100%;
+  height: auto;
+}
+/* Footer Section */
+.footerSection {
+  background-color: #3c3c3c;
+  color: #fff;
+}
+.footerSection a {
+  color: #fff;
+}
+.footerSection .title {
+  font-family: "Oswald", sans-serif;
+}
+.footerSection .subtitle {
+  font-family: "Anton", sans-serif;
+}
+.footerSection .text {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+/* Social Media */
+div.social-btn {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+div.social-btn a {
+  text-decoration: none;
+}
+div.social-btn div {
+  display: inline-block;
+  float: left;
+  width: 18%;
+  height: 100%;
+  color: #fff;
+  margin-right: 5px;
+  padding: 5% 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  text-shadow: 0px 0px 5px #000;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+div.social-btn a:last-child div {
+  margin-right: 0;
+}
+div.social-btn div:hover,
+div.social-btn div:active {
+  height: 110%;
+}
+i {
+  -moz-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+div.face {
+  background: #3a5795;
+  -moz-box-shadow: 0px 4px 0px #1e469d;
+  -webkit-box-shadow: 0px 4px 0px #1e469d;
+  box-shadow: 0px 4px 0px #3e6d8d;
+  position: relative;
+}
+
+div.insta {
+  background: #c13584;
+  -moz-box-shadow: 0px 4px 0px #833ab4;
+  -webkit-box-shadow: 0px 4px 0px #833ab4;
+  box-shadow: 0px 4px 0px #833ab4;
+  position: relative;
+}
+div.yt {
+  background: #c4302b;
+  -moz-box-shadow: 0px 4px 0px #d4403b;
+  -webkit-box-shadow: 0px 4px 0px #d4403b;
+  box-shadow: 0px 4px 0px #d4403b;
+  position: relative;
+}
+div.gmail {
+  background: #6c6c6c;
+  -moz-box-shadow: 0px 4px 0px #777777;
+  -webkit-box-shadow: 0px 4px 0px #777777;
+  box-shadow: 0px 4px 0px #777777;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .titleBox .display-1 {
+    font-size: 3.2rem;
+  }
+  .titleBox .subTitle {
+    font-size: 1.5rem;
+  }
+  .titleBox .subtext {
+    left: 15vw;
+    width: 70vw;
+    font-size: 1.4rem;
+  }
+  .singlePage .display-4 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .titleBox .display-1 {
+    font-size: 2.7rem;
+  }
+  .titleBox .subTitle {
+    font-size: 1.2rem;
+  }
+  .titleBox .subtext {
+    left: 10vw;
+    width: 80vw;
+    font-size: 1.3rem;
+  }
+  .singlePage .display-4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 340px) {
+  .titleBox .display-1 {
+    font-size: 2rem;
+  }
+  .titleBox .subTitle {
+    font-size: 1rem;
+  }
+  .titleBox .subtext {
+    font-size: 1rem;
+    left: 10vw;
+    width: 80vw;
+  }
+  .singlePage .display-4 {
+    font-size: 25px;
+  }
+}

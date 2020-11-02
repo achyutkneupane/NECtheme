@@ -25,11 +25,11 @@
     ?>
     <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
         <div class="container-fluid">
-            <a class="navbar-brand h1 mx-auto" href="/">
+            <div class="navbar-brand h1 mx-auto">
                 <?php
                 the_custom_logo();
                 ?>
-            </a>
+            </div>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
                 aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>

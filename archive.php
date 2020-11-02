@@ -6,7 +6,7 @@ if (has_post_thumbnail()) {
     the_post_thumbnail_url();
     echo ');">';
 } else {
-    echo '<div class="pageSection bgImage" style="
+    echo '<div class="jumbotron pageSection bgImage d-flex align-items-center" style="
     background-image: url(' . "/wp-content/themes/nepaliechords/assets/imgs/backgroundImage.jpg" . ');">';
 }
 ?>
@@ -15,7 +15,7 @@ if (has_post_thumbnail()) {
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center text-light display-4">
-                <?php echo (get_the_archive_title()); ?>
+                <?php the_archive_title(); ?>
             </h1>
         </div>
     </div>

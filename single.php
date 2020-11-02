@@ -6,7 +6,7 @@ if (has_post_thumbnail()) {
     the_post_thumbnail_url();
     echo ');">';
 } else {
-    echo '<div class="pageSection bgImage" style="
+    echo '<div class="jumbotron pageSection bgImage d-flex align-items-center" style="
     background-image: url(' . "/wp-content/themes/nepaliechords/assets/imgs/backgroundImage.jpg" . ');">';
 }
 ?>

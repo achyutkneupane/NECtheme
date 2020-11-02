@@ -1,20 +1,28 @@
 <?php
-/*
-Template Name: Chords & Tabs
-Template Post Type: crd_sheet_music
-*/
 get_header();
-echo '<div class="archiveSection bgImage" style="
+if (has_post_thumbnail()) {
+    echo '<div class="jumbotron pageSection bgImage d-flex align-items-center" style="
+    background-image: url(';
+    the_post_thumbnail_url();
+    echo ');">';
+} else {
+    echo '<div class="jumbotron pageSection bgImage d-flex align-items-center" style="
     background-image: url(' . "/wp-content/themes/nepaliechords/assets/imgs/backgroundImage.jpg" . ');">';
+}
 ?>
 <div class="darkOverlay"></div>
-<div class="titleBox display-table">
-    <div class="table-cell">
-        <h1 class="text-light display-1"><?php post_type_archive_title(); ?></h1>
+<div class="singlePage titleBox container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-light display-4">
+                <?php the_archive_title(); ?>
+            </h1>
+        </div>
     </div>
 </div>
 </div>
 <?php
+
 get_template_part('inc/page', 'chord');
 get_footer();
 ?>

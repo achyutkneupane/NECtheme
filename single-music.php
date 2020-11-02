@@ -1,8 +1,4 @@
 <?php
-/*
-Template Name: Chords & Tabs
-Template Post Type: crd_sheet_music
-*/
 get_header();
 echo '<div class="archiveSection bgImage" style="
     background-image: url(' . "/wp-content/themes/nepaliechords/assets/imgs/backgroundImage.jpg" . ');">';

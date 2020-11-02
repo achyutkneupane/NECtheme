@@ -159,11 +159,13 @@ add_filter('get_the_archive_title', function ($title) {
     } elseif (is_tag()) {
         $title = "<h1 class='text-light display-1'>" . ucwords(single_tag_title('', false)) . "</h1>";
     } elseif (is_author()) {
-        $title = "<h1 class='text-light display-4'>Posts by " . ucwords(get_the_author()) . "</h1>";
+        $title = "<h1 class='text-light display-3'>Posts by " . ucwords(get_the_author()) . "</h1>";
     } elseif (is_tax()) { //for custom post types
-        $title = sprintf(__('%1$s'), single_term_title('', false));
+        $title = "<h1 class='text-light display-1'>" . sprintf(__('%1$s'), single_term_title('', false)) . "</h1>";
     } elseif (is_post_type_archive()) {
         $title = "<h1 class='text-light display-1'>" . ucwords(post_type_archive_title('', false)) . "</h1>";
+    } else {
+        $title = "<h1 class='text-light display-1'>" . ucwords(the_title('', false)) . "</h1>";
     }
     return $title;
 });

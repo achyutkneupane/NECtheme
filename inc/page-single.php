@@ -18,6 +18,19 @@
                     <div class="col-md-12">
                         <?php
                                 the_content();
+                                $post_tags = get_the_tags();
+
+                                if ($post_tags) {
+                                    echo ("<div class='pageText'><span class='text-dark h5'>Tags:</span> ");
+                                    foreach ($post_tags as $tag) {
+                                        if (count($post_tags) > 1) {
+                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . ucwords($tag->name) . '</a><span class="text-dark">,</span> ';
+                                        } else {
+                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . ucwords($tag->name) . '</a>';
+                                        }
+                                    }
+                                    echo ("</div>");
+                                }
                                 comments_template();
                                 ?>
                     </div>

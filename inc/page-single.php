@@ -18,6 +18,7 @@
                     <div class="col-md-12">
                         <?php
                                 the_content();
+                                dynamic_sidebar('new-sidebar-1');
                                 $post_tags = get_the_tags();
 
                                 if ($post_tags) {
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="col-md-4 box-shadow-full my-3 mx-2">
-                <?php get_sidebar('sidebar'); ?>
+                <?php dynamic_sidebar('sidebar'); ?>
             </div>
         </div>
     </div>

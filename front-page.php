@@ -6,13 +6,15 @@ get_header();
     <div class="darkOverlay"></div>
     <div class="titleBox display-table" id="TitleBox">
         <div class="table-cell">
-            <h1 class="text-light display-1"><?php bloginfo('name'); ?></h1>
+            <h1 class="text-light display-3"><?php bloginfo('name'); ?></h1>
             <hr />
             <h3 class="text-light mt-3 subTitle">
                 <?php bloginfo('description'); ?>
             </h3>
             <div class="subtext text-light">
                 <?php echo (get_the_content()); ?>
+
+        <?php dynamic_sidebar('new-sidebar-1'); ?>
             </div>
         </div>
     </div>

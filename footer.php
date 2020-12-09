@@ -3,6 +3,11 @@
     <div class="container-fluid py-3">
         <div class="row">
             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <?php dynamic_sidebar('new-sidebar-2'); ?>
+                    </div>
+                </div>
                 <div class="row justify-content-between">
                     <div class="col-md-4 p-4">
                         <div class="row pb-2">

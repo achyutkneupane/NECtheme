@@ -93,7 +93,6 @@ add_theme_support('post-thumbnails');
 
 function nepaliechords_widgets_init()
 {
-
     register_sidebar(array(
         'name' =>  __('Posts Bar', 'nepaliechords'),
         'id' => 'sidebar',
@@ -101,6 +100,18 @@ function nepaliechords_widgets_init()
         'after_widget' => '</div>',
         'before_title' => '<h4 class="text-center mb-5">',
         'after_title' => '</h4>',
+    ));
+    register_sidebar(array(
+        'name' =>  __('Ad Top', 'nepaliechords'),
+        'id' => 'new-sidebar-1',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+    ));
+    register_sidebar(array(
+        'name' =>  __('Foot Ad', 'nepaliechords'),
+        'id' => 'new-sidebar-2',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
     ));
 }
 add_action('widgets_init', 'nepaliechords_widgets_init');

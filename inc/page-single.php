@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7 box-shadow-full my-3 mx-2">
-                <div class="row">
+                <div class="row mb-2">
                     <div class="col-md-12 w-100 h-auto">
                         <?php
                         if (has_post_thumbnail()) {
